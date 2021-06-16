@@ -15,6 +15,7 @@ struct CardView: View {
     
     //MARK: -Properties
     var card: MemoryGame<String>.Card
+    var color: UIColor
     
     //MARK: -UI Implementation
     var body: some View {
@@ -29,7 +30,7 @@ struct CardView: View {
                     }
                 }
             }
-            .foregroundColor(.orange)
+            .foregroundColor(Color(color))
             .font(.system(size: scaleSize(for: geo.size), weight: .regular))
         }
     }

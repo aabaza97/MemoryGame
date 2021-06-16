@@ -17,6 +17,8 @@
 		ACCEA4A52679397A0085D4F7 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEA4A42679397A0085D4F7 /* GridView.swift */; };
 		ACCEA4A826793D660085D4F7 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEA4A726793D660085D4F7 /* GridLayout.swift */; };
 		ACCEA4AA2679428A0085D4F7 /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEA4A92679428A0085D4F7 /* Array+Identifiable.swift */; };
+		ACCEA4AC2679E6250085D4F7 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEA4AB2679E6250085D4F7 /* Consts.swift */; };
+		ACCEA4AE2679E6700085D4F7 /* GameTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCEA4AD2679E6700085D4F7 /* GameTheme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		ACCEA4A42679397A0085D4F7 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		ACCEA4A726793D660085D4F7 /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		ACCEA4A92679428A0085D4F7 /* Array+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
+		ACCEA4AB2679E6250085D4F7 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		ACCEA4AD2679E6700085D4F7 /* GameTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				ACCEA49C2678C4A50085D4F7 /* MemoryGame.swift */,
+				ACCEA4AD2679E6700085D4F7 /* GameTheme.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			children = (
 				ACCEA4A726793D660085D4F7 /* GridLayout.swift */,
 				ACCEA4A92679428A0085D4F7 /* Array+Identifiable.swift */,
+				ACCEA4AB2679E6250085D4F7 /* Consts.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -189,12 +195,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACCEA49D2678C4A50085D4F7 /* MemoryGame.swift in Sources */,
+				ACCEA4AE2679E6700085D4F7 /* GameTheme.swift in Sources */,
 				ACCEA48D26777FC60085D4F7 /* MemoryGameView.swift in Sources */,
 				ACCEA48B26777FC60085D4F7 /* MemoryGameApp.swift in Sources */,
 				ACCEA4A12678C6A40085D4F7 /* EmojiMemoryGame.swift in Sources */,
 				ACCEA4A52679397A0085D4F7 /* GridView.swift in Sources */,
 				ACCEA4AA2679428A0085D4F7 /* Array+Identifiable.swift in Sources */,
 				ACCEA4A826793D660085D4F7 /* GridLayout.swift in Sources */,
+				ACCEA4AC2679E6250085D4F7 /* Consts.swift in Sources */,
 				ACCEA4A32678DC530085D4F7 /* CardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
