@@ -21,15 +21,12 @@ struct CardView: View {
     var body: some View {
         GeometryReader { geo in
             ZStack {
-                if card.isFacing {
-                    RoundedRectangle(cornerRadius: cornerRadius).fill(Color.white)
-                    Text(card.content)
-                } else {
-                    if !card.didMatch {
-                        RoundedRectangle(cornerRadius: cornerRadius)
-                    }
-                }
+                Pie(startAngle: Angle(degrees: 270), endAngle: Angle(degrees: 20))
+                    .padding(3)
+                    .opacity(0.4)
+                Text(card.content)
             }
+            .cardify(isFacing: card.isFacing, didMatch: card.didMatch)
             .foregroundColor(Color(color))
             .font(.system(size: scaleSize(for: geo.size), weight: .regular))
         }

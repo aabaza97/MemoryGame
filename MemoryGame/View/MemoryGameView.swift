@@ -9,11 +9,7 @@ import SwiftUI
 
 
 struct MemoryGameView: View {
-    @ObservedObject var emojiGame: EmojiMemoryGame {
-        didSet {
-            
-        }
-    }
+    @ObservedObject var emojiGame: EmojiMemoryGame
     
     init(emojiGame: EmojiMemoryGame) {
         self.emojiGame = emojiGame
@@ -29,7 +25,6 @@ struct MemoryGameView: View {
                 ZStack {
                     Color(theme.backgroundColor).ignoresSafeArea()
                     VStack {
-                        
                         GridView(emojiGame.cards) { card in
                             CardView(
                                 card: card,
@@ -44,9 +39,9 @@ struct MemoryGameView: View {
                 }
                 .navigationBarTitle("\(theme.id) Emoji")
                 .navigationBarItems(
-                    leading: Text("\(emojiGame.score)")
+                    leading: Text("Score:  \(emojiGame.score)")
                         .foregroundColor(.white)
-                        .font(.system(size: 28, weight: .bold)),
+                        .font(.system(size: 26, weight: .heavy)),
                     trailing: Button(
                         action: {
                             emojiGame.startNewGame()
@@ -65,18 +60,12 @@ struct MemoryGameView: View {
         return min(size.width, size.height) * 0.075
     }
     
-    private func resyncNavView(){
-        let theme = emojiGame.theme
-        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: theme.cardColor]
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: theme.cardColor]
-        UINavigationBar.appearance().barStyle = .black
-    }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            MemoryGameView(emojiGame: EmojiMemoryGame())
-        }
+        let game = EmojiMemoryGame()
+        game.pickCard(card: game.cards[0])
+        return MemoryGameView(emojiGame: game)
     }
 }

@@ -10,10 +10,9 @@ import SwiftUI
 
 struct MemoryGame<Content> where Content: Equatable{
     //MARK: -Data Members
-    var cards: Array<Card> = Array()
-    var score: Int = 0
+    private(set) var cards: Array<Card> = Array()
     
-    var indexOfDistinctFacingCard: Int? {
+    private var indexOfDistinctFacingCard: Int? {
         get {
             let upFacingIndices = cards.indices.filter { index in cards[index].isFacing }
             return upFacingIndices.count == 1 ? upFacingIndices.first : nil
@@ -25,6 +24,9 @@ struct MemoryGame<Content> where Content: Equatable{
             }
         }
     }
+    
+    var score: Int = 0
+    
     
     
     //MARK: -Inits

@@ -41,8 +41,9 @@ class EmojiMemoryGame: ObservableObject {
         self.game = EmojiMemoryGame.createGame(with: theme)
     }
     
+    
     //MARK: -Type Functions
-    static func createGame() -> MemoryGame<String> {
+    static private func createGame() -> MemoryGame<String> {
         let emojisList: Array<String> = ["⚽️", "🏀", "🏈", "🎾", "🏐"]
         let randomPairs = Int.random(in: 2..<emojisList.count)
         
@@ -52,12 +53,15 @@ class EmojiMemoryGame: ObservableObject {
         return game
     }
     
-    static func createGame(with theme: Theme) -> MemoryGame<String> {
+    static private func createGame(with theme: Theme) -> MemoryGame<String> {
         let gameTheme = theme.gameTheme
         let emojisList = gameTheme.emojisSet.shuffled()
-        return MemoryGame<String>(numberOfPairs: gameTheme.numberOfPairs) { pairIndex in
+        let game =  MemoryGame<String>(numberOfPairs: gameTheme.numberOfPairs) { pairIndex in
             return emojisList[pairIndex]
         }
+//        print("==================================Shuffled Cards Supposedly================================")
+//        print(game.cards.shuffled())
+        return game
     }
     
     
